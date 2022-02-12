@@ -1,13 +1,13 @@
 import React from 'react'
 import './UserProfile.css'
-function UserProfile() {
+function UserProfile({name, photoUrl}) {
   return (
     <div className='user-profile' >
         <div className="user-image">
-            <img src="./user.png" alt="" />
+            <img src={photoUrl} alt="" />
         </div>
         <div className="user-info">
-            <p className='username'>sinsarul haq</p>
+            <p className='username'>{name}</p>
         </div>
     </div>
   )

@@ -1,0 +1,29 @@
+.user-profile{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid lightgrey;
+    cursor: pointer;
+}
+
+.user-image{
+    width: 45px;
+}
+.user-image > img{
+    width: 100%;
+    border-radius: 100%;
+}
+
+.user-info{
+    flex: 1;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.username{
+    text-transform: capitalize;
+    font-size: 15px;
+}
+.user-profile:hover{
+    background-color: lightgrey;
+}

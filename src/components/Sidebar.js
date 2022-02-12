@@ -26,7 +26,9 @@ function Sidebar() {
             </div>
         </div>
         <div className="sidebar-chat-list">
-            <UserProfile />
+            <UserProfile name='sinsarul haq' photoUrl="./user.png" />
+            <UserProfile name='Rock' photoUrl='./user.png' />
+            <UserProfile name='Rock' photoUrl='./user.png' />
         </div>
     </div>
   )
