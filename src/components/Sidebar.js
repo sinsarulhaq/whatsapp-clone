@@ -20,14 +20,14 @@ function Sidebar({ currentUser, signOut }) {
     };
     getAllUsers();
   }, []);
-  console.log("users >>> ", allUsers);
+  // console.log("users >>> ", allUsers);
   // eslint-disable-next-line array-callback-return
   const SearchedUser = allUsers.filter((user) => {
     if (searchInput) {
       if (
         user.data().fullname.toLowerCase().includes(searchInput.toLowerCase())
       ) {
-          return user
+        return user;
         // console.log(user.data().fullname);
       }
     }
@@ -39,15 +39,15 @@ function Sidebar({ currentUser, signOut }) {
         name={user.data().fullname}
         photoUrl={user.data().photoURL}
         key={user.id}
+        email={user.data().email}
       />
     );
   });
-
   return (
     <div className="sidebar">
       <div className="sidebar-header">
-        <div className="sidebar-header-img">
-          <img src={currentUser.photoUrl} onClick={signOut} alt="user-profile" />
+        <div className="sidebar-header-img" onClick={signOut}>
+          <img src={currentUser?.photoUrl} alt="user-profile" />
         </div>
         <div className="sidebar-header-btn">
           <TollIcon />
